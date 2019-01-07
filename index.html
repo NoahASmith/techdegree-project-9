@@ -171,7 +171,7 @@
     </header>
 
     <main>
-        <div class="clearfix">
+        <div class="clearfix dashboard">
             <span class="dashboard-title"> Dashboard </span>
 
             <div class="search">
@@ -182,50 +182,49 @@
         </div>
 
         <div class="alert">
-            <span id="alert">Alert</span> <span>Nullum quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur blandit tempus porttitor.</span> <i class="fas fa-times" id="close" ></i>
+            <span id="alert">Alert</span> <span>Nullum quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur blandit tempus porttitor.</span> <i class="fas fa-times" id="close"></i>
         </div>
 
         <div class="traffic"> 
             <h3>Traffic</h3>
         </div>
 
-        <canvas class="line" id="lineChart" width="400" height="400">
-        </canvas>
+        <div>
+            <ul class="chartOptions">
+                <li class="btn hourly"><a>Hourly</a></li>
+                <li class="btn daily"><a>Daily</a></li>
+                <li class="btn weekly"><a>Weekly</a></li>
+                <li class="btn monthly"><a>Monthly</a></li>
+            </ul>
+        </div>
+        
+        <div class="line">
+            <canvas class="line" id="lineChart" width="400" height="200">
+            </canvas>
+        </div>
 
+        <div class="bar">
+            <canvas class="bar" id="barChart" width="400" height="200">
+            </canvas>
+        </div>
+
+        <div class="donut">
+            <canvas id="donutChart" width="800" height="450">
+            </canvas>
+
+        </div>
     </main>
 
 
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js">
-
 </script>
-<script>
-    var ctx = document.getElementById('lineChart').getContext('2d');
-        var chart = new Chart(ctx, {
-            // The type of chart we want to create
-            type: 'line',
-
-            // The data for our dataset
-            data: {
-                labels: ["16-22", "23-29", "30-5", "6-12", "13-19"],
-                datasets: [{
-                    label: 'Traffic',
-                    backgroundColor: 'rgba(116, 119, 191, .2)',
-                    borderColor: 'rgb(116, 119, 191)',
-                    data: [750, 1250, 1000, 1500, 2000],
-                    borderWidth: 3
-                }]
-            },
-
-            // Configuration options go here
-            options: {
-                legend: {
-                    display: false,
-
-                }
-            }
-        });
+<script src="js/lineChart.js">
+</script>
+<script src="js/barChart.js">
+</script>
+<script src="js/donutChart.js">
 </script>
 
 </body>
