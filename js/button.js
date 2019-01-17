@@ -1,7 +1,10 @@
-let chart = document.getElementById('chartOptions');
+const button = document.getElementById('chartOptions');
 
-let button = chart.childNodes;
+const daily = document.getElementById('daily')
+const hourly = document.getElementById('hourly')
+const weekly = document.getElementById('weekly')
+const monthly = document.getElementById('monthly')
 
-button.addEventListenver('click', () => {
-    console.log('Yo you suck')
+button.addEventListener('click', function() {
+    
 });
