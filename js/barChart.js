@@ -3,7 +3,7 @@
 const secondChart = document.getElementById('barChart').getContext('2d');
 
 Chart.defaults.global.animation.easeing = 'easeInQuint'
-Chart.defaults.global.animation.duration = 2500
+Chart.defaults.global.animation.duration = 2525
 
 let bar = new Chart(secondChart, {
     // The type of chart we want to create

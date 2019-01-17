@@ -1,5 +1,5 @@
 const thirdChart = document.getElementById("donutChart").getContext('2d');
-Chart.defaults.doughnut
+
 let third = new Chart(thirdChart, {
 
     type: 'doughnut',
