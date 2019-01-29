@@ -1,45 +1,24 @@
-const thirdChart = document.getElementById("donutChart").getContext('2d');
+const CHART = document.getElementById('donutChart');
 
-let third = new Chart(thirdChart, {
-
+let donutChart = new Chart(CHART, {
     type: 'doughnut',
-
     data: {
-
-        labels: ["Phone", "Desktop", "Tablet"],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 3, 3],
-            backgroundColor: [
-                '#81c98f',
-                '#74b1bf',
-                '#7377bf'
-            ],
-            borderWidth: 1
-        }]
+        labels: ['Tablet', 'Phone', 'Desktop'],
+        datasets: [
+            {
+                label: 'Phones',
+                backgroundColor: [
+                    '#81c98f',
+                    '#74b1bf',
+                    '#7377bf'],
+                data: [40, 32, 144]
+            }
+        ]
     },
     options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        },
-        legend: {
-            display: false
-        },
-        scales: {
-            xAxes: [{
-                gridLines: {
-                    display: false
-                }
-            }],
-            yAxes: [{
-                gridLines: {
-                    display: false
-                }
-            }]
-        },
+            legend: {
+                display: false
+            }
     }
+
 });

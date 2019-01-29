@@ -1,10 +1,6 @@
-const button = document.getElementById('chartOptions');
+const hourly = document.getElementById('hourly');
+const daily = document.getElementById('daily');
+const weekly = document.getElementById('weekly');
+const monthly = document.getElementById('monthly');
 
-const daily = document.getElementById('daily')
-const hourly = document.getElementById('hourly')
-const weekly = document.getElementById('weekly')
-const monthly = document.getElementById('monthly')
-
-button.addEventListener('click', function() {
-    
-});
+console.log(hourly);

@@ -233,6 +233,9 @@ li {
                 &:hover {
                         color: $p-d; 
                 }
+                &:active {
+                        color: $p-l;
+                }
         }
 }
 
@@ -261,8 +264,25 @@ li {
 .hourly,
 .monthly,
 .daily,
-.weekly {
+.weekly { 
         font-weight: 800;
         padding: 5px 10px;
         cursor: pointer;
+}
+
+.chart {
+        margin: 1.5em;
+
+}
+
+.donut,
+.line {
+        margin-left: auto;
+        margin-right: auto;
+}
+
+.bar {
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
 }
